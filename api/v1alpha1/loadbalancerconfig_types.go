@@ -70,6 +70,9 @@ const (
 
 	// LoadBalancerConfigTypeAvi is the LoadBalancerConfigType for Avi.
 	LoadBalancerConfigTypeAvi LoadBalancerConfigType = "avi"
+
+	// LoadBalancerConfigTypeKubeVip is the LoadBalancerConfigType for kube-vip.
+	LoadBalancerConfigTypeKubeVip LoadBalancerConfigType = "kubevip"
 )
 
 // LoadBalancerConfigSpec defines the desired state of LoadBalancerConfig
