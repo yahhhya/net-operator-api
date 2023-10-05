@@ -72,13 +72,13 @@ const (
 	LoadBalancerConfigTypeAvi LoadBalancerConfigType = "avi"
 
 	// LoadBalancerConfigTypeKubeVip is the LoadBalancerConfigType for kube-vip.
-	LoadBalancerConfigTypeKubeVip LoadBalancerConfigType = "kubevip"
+	LoadBalancerConfigTypeKubeVip LoadBalancerConfigType = "kube_vip"
 )
 
 // LoadBalancerConfigSpec defines the desired state of LoadBalancerConfig
 type LoadBalancerConfigSpec struct {
 	// Type describes type of load balancer. Supported value is haproxy
-	// +kubebuilder:validation:Enum=haproxy;avi
+	// +kubebuilder:validation:Enum=haproxy;avi,kube_vip
 	Type LoadBalancerConfigType `json:"type"`
 	// ProviderRef is reference to a load balancer provider object that provides the details for this type of load balancer
 	ProviderRef LoadBalancerConfigProviderReference `json:"providerRef"`
